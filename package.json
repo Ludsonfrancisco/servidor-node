@@ -9,7 +9,9 @@
   "name": "servidor-node",
   "version": "1.0.0",
   "main": "server.js",
-  "keywords": [],
+  "keywords": [
+    "Javascript, Express"
+  ],
   "author": "",
   "license": "ISC",
   "description": ""
