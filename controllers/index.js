@@ -1,5 +1,8 @@
 const home = (req, res) => {
-  res.send('HOME')
+  const time = new Date().getTime()
+  res.render('home', {
+    time
+  })
 }
 
 const pagina1 = (req, res) => {
@@ -7,12 +10,11 @@ const pagina1 = (req, res) => {
 }
 
 const calc = (req, res) => {
-  console.log(req.query)
   if (req.query.num1 && req.query.num2) {
     const { num1, num2 } = req.query
     const soma = parseFloat(num1) + parseFloat(num2)
     // console.log(soma)
-    res.send('A soma e:' + soma)
+    res.render('calc', { soma })
   } else {
     res.send('calculadora')
   }
