@@ -1,6 +1,3 @@
-const { red } = require("color-name")
-const e = require("express")
-
 const home = (req, res) => {
   res.send('HOME')
 }
