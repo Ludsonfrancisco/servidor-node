@@ -1,7 +1,14 @@
 const home = (req, res) => {
-  const time = new Date().getTime()
   res.render('home', {
-    time
+    time: 10,
+    list: ['Ludson', 'Francisco', 'Dutra', 'Correa'],
+    animais: [
+      { name: 'Bilu' },
+      { name: 'Espirro' },
+      { name: 'Duck' },
+      { name: 'Pequeno' },
+      { name: 'Duqueza' }
+    ]
   })
 }
 
@@ -13,10 +20,9 @@ const calc = (req, res) => {
   if (req.query.num1 && req.query.num2) {
     const { num1, num2 } = req.query
     const soma = parseFloat(num1) + parseFloat(num2)
-    // console.log(soma)
     res.render('calc', { soma })
   } else {
-    res.send('calculadora')
+    res.render('erro')
   }
 }
 
